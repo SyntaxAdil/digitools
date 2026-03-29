@@ -1,14 +1,13 @@
-import { Suspense } from "react";
+import React from "react";
+import Navbar from "./components/navbar/Navbar";
 
-import CustomButton from "./components/ui/CustomButton";
-
-// const fetchData = async () => {
-//   const res = (await fetch("/data.json")).json();
-//   return res;
-// };
 const App = () => {
-  // const fetchProducts = fetchData();
-  return <div>Lets start</div>;
+  return (
+    <>
+      <Navbar />
+      <main className="mt-20 max-w-300 mx-auto space-y-10 "></main>
+    </>
+  );
 };
 
 export default App;
