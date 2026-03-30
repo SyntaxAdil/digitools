@@ -6,12 +6,18 @@ import ToolsSection from "./sections/ToolsSection";
 import { useEffect, useState } from "react";
 import { toast, ToastContainer, Zoom } from "react-toastify";
 import GetStarted from "./sections/GetStarted";
+import PricingSection from "./sections/PricingSection";
 const fetchProductData = async () => {
   const res = (await fetch("/data.json")).json();
   return res;
 };
+const fetchPlanData = async () => {
+  const res = (await fetch("/plan.json")).json();
+  return res;
+};
 
 const productData = fetchProductData();
+const planData = fetchPlanData();
 const App = () => {
   const [cartItem, setCartItem] = useState(() => {
     try {
@@ -60,6 +66,10 @@ const App = () => {
         />
       </Wrapper>
       <GetStarted />
+      <Wrapper>
+        <PricingSection planData={planData} />
+      </Wrapper>
+
       <ToastContainer
         position="top-center"
         autoClose={500}

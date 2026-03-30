@@ -28,7 +28,7 @@ const getStartedContent = [
 
 const GetStarted = () => {
   return (
-    <section className="bg-[#f9fafc] py-12 md:py-20 ">
+    <section className="bg-[#f9fafc] py-4 pb-12 md:py-20 ">
       <Wrapper>
         <Header
           title={"Get Started in 3 Steps"}
