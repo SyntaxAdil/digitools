@@ -30,7 +30,7 @@ const ToolsSection = ({
 }) => {
   const [selectBtn, setSelectBtn] = useState("products");
   return (
-    <section className="pb-8 md:pt-4 md:pb-25" id="products" >
+    <section className="pb-8 md:pt-4 md:pb-25 scroll-mt-25 md:scroll-mt-20" id="products" >
       <Header
         title={"Premium Digital Tools"}
         subtitle={
