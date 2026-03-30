@@ -1,15 +1,13 @@
 import { Check } from "lucide-react";
 import CustomButton from "./CustomButton";
 
-
-
-const ToolsSectionCard = ({ product }) => {
-  
+const ToolsSectionCard = ({ product, addToCart, cartItem }) => {
   const badgeClasses = {
     best_seller: " bg-[#fef3c6] text-[#bb4d00]",
     popular: "  bg-[#e1e7ff] text-[#7724f8]",
     new: " bg-[#dbfce7] text-[#0a883e]",
   };
+  const alreadyAdded = cartItem.find((i) => i.id === product.id);
   return (
     <div className="card p-4 rounded-md shadow relative min-h-95">
       {/* badge */}
@@ -39,7 +37,14 @@ const ToolsSectionCard = ({ product }) => {
             </li>
           ))}
         </ul>
-        <CustomButton extraClass="w-full py-2 ">Buy Now</CustomButton>
+
+        <CustomButton
+          disabled={alreadyAdded}
+          onClick={() => addToCart(product)}
+          extraClass="w-full py-2 "
+        >
+          {alreadyAdded ? "Added to Cart" : "Buy Now"}
+        </CustomButton>
       </div>
     </div>
   );

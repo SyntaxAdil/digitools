@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ShoppingCart, Menu, X } from "lucide-react";
-import CustomButton from './../ui/CustomButton';
+import CustomButton from "./../ui/CustomButton";
 
 const NAV_LINKS = [
   { id: 1, link: "Products", href: "/products" },
@@ -10,7 +10,7 @@ const NAV_LINKS = [
   { id: 5, link: "FAQ", href: "#faq" },
 ];
 
-const Navbar = () => {
+const Navbar = ({ cartItem }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = NAV_LINKS.map((links) => (
@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <header className="shadow fixed left-0 top-0 right-0 z-40 bg-white">
       <nav className="flex items-center justify-between px-4 md:px-10 py-4 max-w-7xl mx-auto">
-        <h1 className="bg-custom-gradient text-transparent bg-clip-text text-3xl font-extrabold py-1 select-none">
+        <h1 className="bg-custom-gradient text-transparent bg-clip-text text-2xl md:text-3xl font-extrabold py-1 select-none">
           DigiTools
         </h1>
 
@@ -38,11 +38,11 @@ const Navbar = () => {
         </ul>
 
         <div className="hidden md:flex items-center gap-8">
-          <div className="relative w-fit cursor-pointer hover:text-purple-600 transition-colors duration-200">
+          <div className="relative w-fit  hover:text-purple-600 transition-colors duration-200">
             <ShoppingCart />
-            <span className="w-5 h-5 text-white text-[12px] font-semibold absolute -right-2 -top-1.5 flex items-center justify-center rounded-full bg-red-500">
-              1
-            </span>
+            {cartItem.length>0 && <span className="w-5 h-5 text-white text-[12px] font-semibold absolute -right-2 -top-1.5 flex items-center justify-center rounded-full bg-red-500">
+              {cartItem.length > 0 ? cartItem.length : ""}
+            </span>}
           </div>
 
           <a
@@ -57,11 +57,11 @@ const Navbar = () => {
         </div>
 
         <div className="flex md:hidden items-center gap-5">
-          <div className="relative w-fit cursor-pointer">
+          <div className="relative w-fit ">
             <ShoppingCart size={22} />
-            <span className="w-5 h-5 text-white text-[12px] font-semibold absolute -right-2 -top-1.5 flex items-center justify-center rounded-full bg-red-500">
-              1
-            </span>
+            {cartItem.length>0 && <span className="w-5 h-5 text-white text-[12px] font-semibold absolute -right-2 -top-1.5 flex items-center justify-center rounded-full bg-red-500">
+              {cartItem.length > 0 ? cartItem.length : ""}
+            </span>}
           </div>
 
           <button
