@@ -3,7 +3,7 @@ import CustomButton from "./../components/ui/CustomButton";
 import HERO_IMAGE from "../assets/banner.png"
 const Hero = () => {
   return (
-    <seciton className="py-21 grid grid-cols-1 md:grid-cols-2  items-center ps-4">
+    <section className="py-21 grid grid-cols-1 md:grid-cols-2  items-center ps-4">
       {/* left side */}
       <div className="space-y-5">
         <div className="flex items-center gap-3 px-4 py-2 rounded-full w-fit bg-[#e1e7ff]">
@@ -59,7 +59,7 @@ const Hero = () => {
         <img src={HERO_IMAGE} alt="hero image" className="max-w-100   hover:-translate-y-2 transition-all duration-150 mx-auto" />
 
       </div>
-    </seciton>
+    </section>
   );
 };
 
