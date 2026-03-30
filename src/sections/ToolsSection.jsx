@@ -3,6 +3,7 @@ import Header from "./../components/header/Header";
 import ToolsSectionCard from "./../components/ui/ToolsSectionCard";
 import CustomButton from "./../components/ui/CustomButton";
 import CartSectionCard from "../components/ui/CartSectionCard";
+import ToolsSectionCardSkeleton from './../components/loader/ToolsSectionCardSkeleton ';
 
 const ProductGrid = ({ productData, addToCart, cartItem }) => {
   const products = use(productData);
@@ -53,7 +54,7 @@ const ToolsSection = ({
       </div>
 
       {selectBtn === "products" ? (
-        <Suspense fallback={<span>Loading...</span>}>
+        <Suspense fallback={<ToolsSectionCardSkeleton/>}>
           <ProductGrid
             cartItem={cartItem}
             productData={productData}

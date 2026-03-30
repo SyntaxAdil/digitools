@@ -1,6 +1,7 @@
 import React, { Suspense, use } from "react";
 import Header from "./../components/header/Header";
 import { PricingCard } from "../components/ui/PricingCard";
+import SkeletonPrice from "./../components/loader/SkeletonPrice";
 
 const PricingGrid = ({ planData }) => {
   const product = use(planData);
@@ -16,7 +17,7 @@ const PricingGrid = ({ planData }) => {
 
 const PricingSection = ({ planData }) => {
   return (
-    <section className="pb-20" >
+    <section className="pb-20">
       <Header
         fsTitle="text-3xl md:text-4xl"
         title={"Simple, Transparent Pricing"}
@@ -25,7 +26,7 @@ const PricingSection = ({ planData }) => {
         }
       />
 
-      <Suspense fallback={<p>Loading</p>}>
+      <Suspense fallback={<SkeletonPrice />}>
         <PricingGrid planData={planData} />
       </Suspense>
     </section>
