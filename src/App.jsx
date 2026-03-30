@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 import { toast, ToastContainer, Zoom } from "react-toastify";
 import GetStarted from "./sections/GetStarted";
 import PricingSection from "./sections/PricingSection";
+import CTA from "./sections/CTA";
+import Footer from "./components/footer/Footer";
 const fetchProductData = async () => {
   const res = (await fetch("/data.json")).json();
   return res;
@@ -69,6 +71,8 @@ const App = () => {
       <Wrapper>
         <PricingSection planData={planData} />
       </Wrapper>
+      <CTA/>
+      <Footer/>
 
       <ToastContainer
         position="top-center"
