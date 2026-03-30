@@ -2,8 +2,8 @@ import React from "react";
 
 const CTA = () => {
   return (
-    <section className="bg-custom-gradient py-10 md:py-30 md:text-center px-4 text-white">
-      <h1 className="text-3xl md:text-[40px] font-extrabold mb-6">Ready to Transform Your Workflow?</h1>
+    <section className="bg-custom-gradient py-15 md:py-30 md:text-center px-4 text-white">
+      <h1 className="text-3xl md:text-[40px] font-extrabold mb-6">Ready To Transform Your Workflow?</h1>
       <p className="text-sm"  >
         Join thousands of professionals who are already using Digitools to work
         smarter. <br className="hidden md:block" /> Start your free trial today.

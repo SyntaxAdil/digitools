@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between gap-10 pb-12 border-b border-white/10">
           <div className="max-w-56">
-            <h2 className="text-2xl font-bold mb-3">DigiTools</h2>
+            <h2 className="text-3xl font-bold mb-3">DigiTools</h2>
             <p className="text-sm text-gray-400 leading-relaxed">
               Premium digital tools for creators, professionals, and businesses.
               Work smarter with our suite of powerful tools.

@@ -3,7 +3,7 @@ import Header from "./../components/header/Header";
 import ToolsSectionCard from "./../components/ui/ToolsSectionCard";
 import CustomButton from "./../components/ui/CustomButton";
 import CartSectionCard from "../components/ui/CartSectionCard";
-import ToolsSectionCardSkeleton from './../components/loader/ToolsSectionCardSkeleton ';
+import ToolsSectionCardSkeleton from "./../components/loader/ToolsSectionCardSkeleton ";
 
 const ProductGrid = ({ productData, addToCart, cartItem }) => {
   const products = use(productData);
@@ -49,12 +49,12 @@ const ToolsSection = ({
           className={`flex-1  rounded-full  font-semibold py-2 ${selectBtn === "cart" ? "bg-custom-gradient text-white" : "bg-transparent text-[#25065D]"} cursor-pointer`}
           onClick={() => setSelectBtn("cart")}
         >
-          Cart
+          Cart ({cartItem.length})
         </button>
       </div>
 
       {selectBtn === "products" ? (
-        <Suspense fallback={<ToolsSectionCardSkeleton/>}>
+        <Suspense fallback={<ToolsSectionCardSkeleton />}>
           <ProductGrid
             cartItem={cartItem}
             productData={productData}
