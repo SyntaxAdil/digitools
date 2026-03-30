@@ -5,6 +5,7 @@ import Wrapper from "./wrapper/Wrapper";
 import ToolsSection from "./sections/ToolsSection";
 import { useEffect, useState } from "react";
 import { toast, ToastContainer, Zoom } from "react-toastify";
+import GetStarted from "./sections/GetStarted";
 const fetchProductData = async () => {
   const res = (await fetch("/data.json")).json();
   return res;
@@ -58,6 +59,7 @@ const App = () => {
           checkOut={checkOut}
         />
       </Wrapper>
+      <GetStarted />
       <ToastContainer
         position="top-center"
         autoClose={500}

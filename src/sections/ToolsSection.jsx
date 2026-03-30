@@ -29,7 +29,7 @@ const ToolsSection = ({
 }) => {
   const [selectBtn, setSelectBtn] = useState("products");
   return (
-    <section className=" md:py-4">
+    <section className="pb-8 md:pt-4 md:pb-25">
       <Header
         title={"Premium Digital Tools"}
         subtitle={
