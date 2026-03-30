@@ -3,9 +3,9 @@ import CustomButton from "./../components/ui/CustomButton";
 import HERO_IMAGE from "../assets/banner.png"
 const Hero = () => {
   return (
-    <section className="py-21 grid grid-cols-1 md:grid-cols-2  items-center ps-4">
+    <section className="py-15 md:py-21 grid grid-cols-1 md:grid-cols-2  items-center md:ps-4">
       {/* left side */}
-      <div className="space-y-5">
+      <div className="space-y-3 md:space-y-5">
         <div className="flex items-center gap-3 px-4 py-2 rounded-full w-fit bg-[#e1e7ff]">
           <div className="flex items-center justify-center">
             <span className="w-2.5 h-2.5 inline-block rounded-full animate-pulse absolute z-2 bg-custom-gradient "></span>
@@ -16,10 +16,10 @@ const Hero = () => {
             New: AI-Powered Tools Available
           </p>
         </div>
-        <h1 className="leading-20 text-6xl font-extrabold">
+        <h1 className="leading-20 text-[55px] md:text-6xl font-black">
           Supercharge Your Digital Workflow
         </h1>
-        <p className="text-lg text-gray-500">
+        <p className="text-md md:text-lg text-gray-500">
           Access premium AI tools, design assets, templates, and productivity
           software—all in one place. Start creating faster today.
           <br />

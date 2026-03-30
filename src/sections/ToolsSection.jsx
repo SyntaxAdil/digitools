@@ -5,7 +5,7 @@ import ToolsSectionCard from "./../components/ui/ToolsSectionCard";
 const ProductGrid = ({ productData }) => {
   const products = use(productData);
   return (
-    <div className="py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div className="py-4 mt-8 md:py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
       {products.map((product) => (
         <ToolsSectionCard key={product.id} product={product} />
       ))}
@@ -15,7 +15,7 @@ const ProductGrid = ({ productData }) => {
 const ToolsSection = ({ productData }) => {
   const [selectBtn, setSelectBtn] = useState("products");
   return (
-    <section className="py-4">
+    <section className=" md:py-4">
       <Header
         title={"Premium Digital Tools"}
         subtitle={
