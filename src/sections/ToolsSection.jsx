@@ -65,10 +65,10 @@ const ToolsSection = ({
           />
         </Suspense>
       ) : (
-        <div className="rounded-md border border-[#F2F2F2] p-8 mt-16">
+        <div className="rounded-md border border-[#F2F2F2] p-4 md:p-8 mt-16">
           <h3 className="text-2xl font-bold  mb-8">Your Cart</h3>
           {cartItem.length === 0 ? (
-            <div className="bg-[#f9fafc] py-16 rounded-xl text-center flex flex-col items-center gap-4">
+            <div className="bg-[#f9fafc] py-16 px-2 rounded-xl text-center flex flex-col items-center gap-4">
               <div className="w-14 h-14 flex items-center justify-center rounded-full bg-gray-100 text-gray-400 text-2xl">
                 🛒
               </div>

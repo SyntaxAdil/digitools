@@ -20,7 +20,7 @@ const CartSectionCard = ({ cart, removeItem }) => {
 
       <button
         onClick={() => removeItem(cart)}
-        className="text-error cursor-pointer font-bold text-sm sm:text-base self-end sm:self-auto"
+        className="text-error cursor-pointer font-bold text-sm sm:text-base self-end sm:self-auto mr-4"
       >
         Remove
       </button>
