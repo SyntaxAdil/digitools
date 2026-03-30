@@ -3,7 +3,7 @@ import { FacebookIcon,InstagramIcon,XIcon } from "../ui/SocialMediaIcon";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0f1117] text-white pt-16 pb-8">
+    <footer className="bg-[#0f1117] text-white pt-16 pb-8" id="faq">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between gap-10 pb-12 border-b border-white/10">
           <div className="max-w-56">

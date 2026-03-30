@@ -17,7 +17,7 @@ const PricingGrid = ({ planData }) => {
 
 const PricingSection = ({ planData }) => {
   return (
-    <section className="pb-20">
+    <section className="pb-20" id="pricing">
       <Header
         fsTitle="text-3xl md:text-4xl"
         title={"Simple, Transparent Pricing"}

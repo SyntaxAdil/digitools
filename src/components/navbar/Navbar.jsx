@@ -3,9 +3,9 @@ import { ShoppingCart, Menu, X } from "lucide-react";
 import CustomButton from "./../ui/CustomButton";
 
 const NAV_LINKS = [
-  { id: 1, link: "Products", href: "/products" },
-  { id: 2, link: "Features", href: "/features" },
-  { id: 3, link: "Pricing", href: "/pricing" },
+  { id: 1, link: "Products", href: "#products" },
+  { id: 2, link: "Features", href: "#features" },
+  { id: 3, link: "Pricing", href: "#pricing" },
   { id: 4, link: "Testimonials", href: "#testimonials" },
   { id: 5, link: "FAQ", href: "#faq" },
 ];
@@ -14,7 +14,7 @@ const Navbar = ({ cartItem }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = NAV_LINKS.map((links) => (
-    <li key={links.id}>
+    <li key={links.id} onClick={()=>setMenuOpen(p=>!p)} >
       <a
         href={links.href}
         className="relative group transition-colors duration-200 hover:text-purple-600"

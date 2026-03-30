@@ -9,3 +9,7 @@ body {
 @utility bg-custom-gradient {
   background-image: linear-gradient(to right, #4F39F6, #9514FA);
 }
+
+html{
+  scroll-behavior: smooth;
+}
