@@ -15,8 +15,9 @@ const CustomButton = ({
         className={`w-full h-full group-hover:bg-transparent transition-all duration-200  px-4 rounded-full py-2  ${invertBg ? "bg-white " : "bg-custom-gradient "}`}
       >
         <span
-          className={`  ${invertBg ? "text-transparent bg-clip-text transition-all duration-200 group-hover:text-white bg-custom-gradient " : "text-white "} `}
+          className={`  ${invertBg ? "text-transparent bg-clip-text transition-all duration-200 group-hover:text-white bg-custom-gradient " : "text-white "} flex items-center gap-1 `}
         >
+          
           {children}
         </span>
       </div>

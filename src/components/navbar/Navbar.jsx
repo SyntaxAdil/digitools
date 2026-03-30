@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <header className="shadow fixed left-0 top-0 right-0 z-40 bg-white">
-      <nav className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+      <nav className="flex items-center justify-between px-10 py-4 max-w-7xl mx-auto">
         <h1 className="bg-custom-gradient text-transparent bg-clip-text text-3xl font-extrabold py-1 select-none">
           DigiTools
         </h1>
