@@ -1,4 +1,4 @@
-import { Suspense, use, useState } from "react";
+import { Suspense, use } from "react";
 import Header from "./../components/header/Header";
 import ToolsSectionCard from "./../components/ui/ToolsSectionCard";
 import CustomButton from "./../components/ui/CustomButton";
@@ -24,13 +24,16 @@ const ToolsSection = ({
   productData,
   addToCart,
   cartItem,
-
+  selectBtn,
+  setSelectBtn,
   removeItem,
   checkOut,
 }) => {
-  const [selectBtn, setSelectBtn] = useState("products");
   return (
-    <section className="pb-8 md:pt-4 md:pb-25 scroll-mt-25 md:scroll-mt-20" id="products" >
+    <section
+      className="pb-8 md:pt-4 md:pb-25 scroll-mt-25 md:scroll-mt-20"
+      id="products"
+    >
       <Header
         title={"Premium Digital Tools"}
         subtitle={

@@ -10,7 +10,7 @@ const NAV_LINKS = [
   { id: 5, link: "FAQ", href: "#faq" },
 ];
 
-const Navbar = ({ cartItem }) => {
+const Navbar = ({ cartItem ,setSelectBtn}) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = NAV_LINKS.map((links) => (
@@ -38,12 +38,12 @@ const Navbar = ({ cartItem }) => {
         </ul>
 
         <div className="hidden md:flex items-center gap-8">
-          <div className="relative w-fit  hover:text-purple-600 transition-colors duration-200">
+          <a href="#products" onClick={()=>setSelectBtn("cart")} className="relative w-fit  hover:text-purple-600 transition-colors duration-200">
             <ShoppingCart />
             {cartItem.length>0 && <span className="w-5 h-5 text-white text-[12px] font-semibold absolute -right-2 -top-1.5 flex items-center justify-center rounded-full bg-red-500">
               {cartItem.length > 0 ? cartItem.length : ""}
             </span>}
-          </div>
+          </a>
 
           <a
             href="#"
@@ -57,12 +57,12 @@ const Navbar = ({ cartItem }) => {
         </div>
 
         <div className="flex md:hidden items-center gap-5">
-          <div className="relative w-fit ">
+          <a a href="#products" onClick={()=>setSelectBtn("cart")} className="relative w-fit ">
             <ShoppingCart size={22} />
             {cartItem.length>0 && <span className="w-5 h-5 text-white text-[12px] font-semibold absolute -right-2 -top-1.5 flex items-center justify-center rounded-full bg-red-500">
               {cartItem.length > 0 ? cartItem.length : ""}
             </span>}
-          </div>
+          </a>
 
           <button
             onClick={() => setMenuOpen((prev) => !prev)}

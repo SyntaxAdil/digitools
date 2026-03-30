@@ -21,6 +21,8 @@ const fetchPlanData = async () => {
 const productData = fetchProductData();
 const planData = fetchPlanData();
 const App = () => {
+  const [selectBtn, setSelectBtn] = useState("products");
+
   const [cartItem, setCartItem] = useState(() => {
     try {
       const stored = localStorage.getItem("cartItem");
@@ -53,13 +55,15 @@ const App = () => {
   };
   return (
     <>
-      <Navbar cartItem={cartItem} />
+      <Navbar cartItem={cartItem} setSelectBtn={setSelectBtn} />
       <Wrapper>
         <Hero />
       </Wrapper>
       <CountSection />
       <Wrapper>
         <ToolsSection
+          setSelectBtn={setSelectBtn}
+          selectBtn={selectBtn}
           cartItem={cartItem}
           removeItem={removeItem}
           productData={productData}
@@ -71,8 +75,8 @@ const App = () => {
       <Wrapper>
         <PricingSection planData={planData} />
       </Wrapper>
-      <CTA/>
-      <Footer/>
+      <CTA />
+      <Footer />
 
       <ToastContainer
         position="top-center"
