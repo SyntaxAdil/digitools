@@ -17,7 +17,7 @@ const Hero = () => {
           </p>
         </div>
         <h1 className="leading-20 text-[55px] md:text-6xl font-black">
-          Supercharge Your Digital Workflow
+          Supercharge Your <span className="bg-custom-gradient text-transparent bg-clip-text" >Digital Workflow</span>
         </h1>
         <p className="text-md md:text-lg text-gray-500">
           Access premium AI tools, design assets, templates, and productivity
